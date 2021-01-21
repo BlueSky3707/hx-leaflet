@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import MapInt from "../../components/maps/MapInt";
+import MapInt from "../../maps/MapInt";
 export default {
   data() {
     return {

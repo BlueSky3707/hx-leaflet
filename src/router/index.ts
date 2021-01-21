@@ -1,17 +1,24 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import ViewContent from "../views/mapviews/ViewContent.vue";
-import Element from "element-ui";
-import "element-ui/lib/theme-chalk/index.css";
+import ZHSJ from "../views/ZHSJ/index.vue";
 
 Vue.use(VueRouter);
-Vue.use(Element);
 
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    name: "ViewContent",
-    component: ViewContent,
+    name: "ZHSJ",
+    component: ZHSJ,
+  },
+  {
+    path: "/QSFX",
+    name: "QSFX",
+    component: ()=> import('../views/QSFX/index.vue'),
+  },
+  {
+    path: "/WRFB",
+    name: "WRFB",
+    component: ()=> import('../views/WRFB/index.vue'),
   },
 ];
 const router = new VueRouter({

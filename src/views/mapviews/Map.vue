@@ -9,16 +9,13 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "proj4leaflet";
 import "proj4";
-import mapConfig from "../../components/maps/mapConfig";
-import MapInt from "../../components/maps/MapInt";
-import LayerUtils from "../../components/maps/LayerUtils";
+import mapConfig from "@/maps/mapConfig";
+import MapInt from "@/maps/MapInt";
+import LayerUtils from "@/maps/LayerUtils";
 import * as esri from "esri-leaflet";
-import LoadLayer from "../../components/maps/LoadLayer";
-import HeatmapOverlay from "../../../node_modules/heatmap.js/plugins/leaflet-heatmap";
-import icon from "../../../node_modules/leaflet/src/images/marker.min.svg";
-import shades from "../../../node_modules/leaflet/src/images/shadow.svg";
+import LoadLayer from "@/maps/LoadLayer";
+import shades from "leaflet/src/images/shadow.svg";
 import MapPop from "../mapviews/MapPop";
-// import echarts from "../../../node_modules/echarts";
 
 export default {
   components: {
@@ -59,7 +56,7 @@ export default {
   methods: {
     setDeafultStyle() {
       let DefaultIcon = L.icon({
-        iconUrl: icon,
+        iconUrl: require('leaflet/src/images/marker.min.svg'),
         shadowUrl: shades,
       });
       L.Marker.prototype.options.icon = DefaultIcon;

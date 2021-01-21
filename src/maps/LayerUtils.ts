@@ -1,4 +1,4 @@
-import MapInt from "../maps/MapInt";
+import MapInt from "./MapInt";
 import L from "leaflet";
 export default class LayerUtils {
   static attrib: string = "&copy xx";

@@ -2,7 +2,7 @@ import Vue from "vue";
 import L from "leaflet";
 import "proj4leaflet";
 import "proj4";
-import mapConfig from "../maps/mapConfig";
+import mapConfig from "./mapConfig";
 
 export default class MapInt {
   static maps: L.Map;

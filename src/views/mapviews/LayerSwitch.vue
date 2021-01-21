@@ -17,9 +17,9 @@
   </div>
 </template>
 <script>
-import MapInt from "../../components/maps/MapInt";
-import mapConfig from "../../components/maps/mapConfig";
-import LayerUtils from "../../components/maps/LayerUtils";
+import MapInt from "../../maps/MapInt";
+import mapConfig from "../../maps/mapConfig";
+import LayerUtils from "../../maps/LayerUtils";
 import L from "leaflet";
 export default {
   data() {

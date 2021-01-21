@@ -1,16 +1,16 @@
-import MapInt from "../maps/MapInt";
+import MapInt from "./MapInt";
 import * as esri from "esri-leaflet";
-import HeatmapOverlay from "../../../node_modules/heatmap.js/plugins/leaflet-heatmap";
-import mapConfig from "../../components/maps/mapConfig";
+import HeatmapOverlay from "../../node_modules/heatmap.js/plugins/leaflet-heatmap";
+import mapConfig from "./mapConfig";
 import L from "leaflet";
-import markercluster from "../../../node_modules/leaflet.markercluster/dist/leaflet.markercluster-src";
-import "../../../node_modules/leaflet.markercluster/dist/MarkerCluster.css";
-import "../../../node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css";
-const echarts = require("../../../node_modules/echarts");
+import markercluster from "leaflet.markercluster/dist/leaflet.markercluster-src";
+import "leaflet.markercluster/dist/MarkerCluster.css";
+import "leaflet.markercluster/dist/MarkerCluster.Default.css";
+const echarts = require("echarts");
 export default class LoadLayer {
   //加载arcgis要素图层
   public loadPointLayer = (): any => {
-    let picy = require("../../assets/良.png");
+    let picy = require("../assets/良.png");
     let pFlayer = esri.featureLayer({
       url: mapConfig.sxqxd,
       pointToLayer: function(geojson, latlng) {
@@ -163,7 +163,7 @@ export default class LoadLayer {
   };
   public loadClusterLayer = () => {
     let markArr: any = [];
-    let clusterPic = require("../../assets/良.png");
+    let clusterPic = require("../assets/良.png");
     let markClusters = new markercluster.MarkerClusterGroup({
       showCoverageOnHover: false,
       zoomToBoundsOnClick: true,
