@@ -37,24 +37,24 @@ export default {
     LayerUtils.addTileLayer(mapConfig.dtVector, 1);
     LayerUtils.addTileLayer(mapConfig.dtVectorL, 2);
     let loadLayer = new LoadLayer();
-    //let pxzqLayer = loadLayer.loadPointLayer();
-    //loadLayer.loadEchartLayer();
-    // pxzqLayer.on("click", (evt) => {
-    //   this.setPopInfo(evt);
-    //   MapInt.getInstance().flyTo(evt.latlng, 7);
-    //   let Profile = Vue.extend(MapPop);
-    //   new Profile().$mount("#contentId");
-    // });
-    //loadLayer.addHeatMapLayer();
-    // let plableLayer = loadLayer.staticLayer();
+    let pxzqLayer = loadLayer.loadPointLayer();
+    loadLayer.loadEchartLayer();
+    pxzqLayer.on("click", (evt) => {
+      this.setPopInfo(evt);
+      MapInt.getInstance().flyTo(evt.latlng, 7);
+      let Profile = Vue.extend(MapPop);
+      new Profile().$mount("#contentId");
+    });
+    loadLayer.addHeatMapLayer();
+    let plableLayer = loadLayer.staticLayer();
     loadLayer.loadClusterLayer();
-    // MapInt.getInstance().on("zoom", function(evt) {
-    //   if (evt.sourceTarget._zoom > 7) {
-    //     MapInt.removeLayerByid("sxtjid");
-    //   } else {
-    //     plableLayer = loadLayer.staticLayer();
-    //   }
-    // });
+    MapInt.getInstance().on("zoom", function(evt) {
+      if (evt.sourceTarget._zoom > 7) {
+        MapInt.removeLayerByid("sxtjid");
+      } else {
+        plableLayer = loadLayer.staticLayer();
+      }
+    });
   },
   methods: {
     setDeafultStyle() {
