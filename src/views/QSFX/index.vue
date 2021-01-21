@@ -1,11 +1,18 @@
 <template>
-  <nav class="qsfx">
+  <div class="qsfx">
     综合分析
-  </nav>
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    console.log("进入综合分析");
+  },
+  destroyed() {
+    console.log("离开综合分析");
+  }
+};
 </script>
 
 <style>

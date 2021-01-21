@@ -1,7 +1,7 @@
 <template>
-  <nav class="zhsj">
+  <div class="zhsj">
     污染分布
-  </nav>
+  </div>
 </template>
 
 <script>

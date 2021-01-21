@@ -1,7 +1,7 @@
 <template>
-  <nav class="zhsj">
+  <div class="zhsj">
       综合事件
-  </nav>
+  </div>
 </template>
 
 <script>
